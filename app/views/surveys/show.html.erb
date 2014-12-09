@@ -1,0 +1,30 @@
+
+
+<h3>Surveys (<%= @survey.questions.size %>)</h3>
+<%= render partial: 'surveys/question', collection: @survey.questions %>
+<%= render partial: 'questions/form' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @survey.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @survey.surname %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @survey.department %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @survey.about %>
+</p>
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>
